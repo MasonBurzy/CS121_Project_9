@@ -1,9 +1,9 @@
 /// HasMenu ///
 
 
-interface HasMenu {
+public interface HasMenu {
 
-	string menu();
-	void start()
+	String menu();
+	void start();
 
 } // end HasMenu

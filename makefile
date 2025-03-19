@@ -26,4 +26,4 @@ testSavings: SavingsAccount.class
  java SavingsAccount
 
 clean:
- rm *.class
+/ rm *.class
