@@ -1,8 +1,11 @@
 /// CheckingAccount ///
 
+import java.util.Scanner;
+
 
 class CheckingAccount implements HasMenu {
 	private double balance;
+	private Scanner scanner;
 
 	public CheckingAccount() {
 		this.balance = 0.0;
@@ -22,24 +25,28 @@ class CheckingAccount implements HasMenu {
 		System.out.println("0) quit\n 1) check balance\n 2) make a deposit\n 3) make a withdrawal");
 		String response = scanner.nextLine();
 		System.out.println(response);
+		return response;
 	}
 
-	public String start() {
-		if (response.equals("0")) {
-			break;
-		} else if (response.equals("1")) {
-			System.out.println("Checking balance...");
-			checkBalance();
-		} else if (response.equals("2")) {
-			System.out.println("Making a deposit...");
-			makeDeposit();
-		} else if (response.equals("3")) {
-			System.out.println("Making a withdrawal");
-			makeWithdrawal();
-		} else {
-			System.out.println("Invalid choice, please try again.");
+	public void start() {
+		while (true) {
+			String response = menu();
+
+			if (response.equals("0")) {
+				break;
+			} else if (response.equals("1")) {
+				System.out.println("Checking balance...");
+				checkBalance();
+			} else if (response.equals("2")) {
+				System.out.println("Making a deposit...");
+				makeDeposit();
+			} else if (response.equals("3")) {
+				System.out.println("Making a withdrawal");
+				makeWithdrawal();
+			} else {
+				System.out.println("Invalid choice, please try again.");
+			}
 		}
-	
 	} // end Start
 
 	public double getBalance() {
@@ -60,7 +67,7 @@ class CheckingAccount implements HasMenu {
 	}	
 	
 	private double getDouble() {
-		scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		try {
            		return scanner.nextDouble();
 		} catch (Exception e) {
