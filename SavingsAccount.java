@@ -1,10 +1,10 @@
 /// SavingsAccount ///
 
+import java.io.*;
 
 public class SavingsAccount extends CheckingAccount {
 	
 	private double interestRate() {
-		super();
 		this.interestRate = 0.02;
 	}
 
@@ -20,10 +20,10 @@ public class SavingsAccount extends CheckingAccount {
 	}
 
 	public void setInterestRate(double interestRate) {
-		this.interestRate = interestRate
+		this.interestRate = interestRate;
 	}
 	
-	public double void getInterestRate() {
+	public void getInterestRate() {
 		return interestRate;
 	}
 

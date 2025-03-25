@@ -1,7 +1,8 @@
 /// Customer ///
 
+import java.io.*
 
-public class Customer extends User {
+public class Customer extends Serializable, User {
 
 	private CheckingAccount checking;
 	private SavingsAccount savings;

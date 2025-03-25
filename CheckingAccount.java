@@ -1,9 +1,9 @@
 /// CheckingAccount ///
 
+import java.io.*;
 import java.util.Scanner;
 
-
-class CheckingAccount implements HasMenu {
+class CheckingAccount implements Serializable, HasMenu {
 	private double balance;
 	private Scanner scanner;
 
