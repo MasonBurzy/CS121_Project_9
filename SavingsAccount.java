@@ -3,10 +3,8 @@
 import java.io.*;
 
 public class SavingsAccount extends CheckingAccount {
-	
-	private double interestRate() {
-		this.interestRate = 0.02;
-	}
+		
+	private double interestRate;
 
 	public static void main(String[] args) {
 		SavingsAccount savings = new SavingsAccount(500.00, 0.03);
