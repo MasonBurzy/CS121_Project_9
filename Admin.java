@@ -3,7 +3,8 @@
 public class Admin extends User {
 
 	public Admin() {
-	
+		this.userName = "admin";
+		this.PIN = "0000";
 	}
 
 	public String menu() {
@@ -14,6 +15,7 @@ public class Admin extends User {
 	}
 
 	public String getReport() {
-		return 
-	
-	}
+		return userName;
+		return PIN;
+       	}
+}
