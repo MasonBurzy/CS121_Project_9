@@ -6,6 +6,11 @@ public class SavingsAccount extends CheckingAccount {
 		
 	private double interestRate;
 
+	public SavingsAccount(double balance, double interestRate) {
+		super(balance);
+		this.interestRate = interestRate;
+	}
+
 	public static void main(String[] args) {
 		SavingsAccount savings = new SavingsAccount(500.00, 0.03);
 		savings.calcInterest();
@@ -21,7 +26,7 @@ public class SavingsAccount extends CheckingAccount {
 		this.interestRate = interestRate;
 	}
 	
-	public void getInterestRate() {
+	public double getInterestRate() {
 		return interestRate;
 	}
 
